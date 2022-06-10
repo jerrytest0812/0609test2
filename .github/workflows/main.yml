@@ -10,10 +10,9 @@ jobs:
     - uses: actions/setup-python@v3 
     - name: dependency
       run: |
-        pip3 install -r requirements.txt;
+        pip3 install -r requirements.txt
     - name: Run server 
       run: |
         python3 server.py > log.txt 2>&1 &
-    - name: Tset rule 001
-      run: |
-        pytest
+        pytest -vv
+        
