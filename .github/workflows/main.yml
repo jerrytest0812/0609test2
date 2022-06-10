@@ -8,8 +8,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v3 
-    - name: Print a greeting
+    - name: dependency
       run: |
-        pip3 install -r requirements.txt
+        pip3 install -r requirements.txt;
+    - name: Run server 
+      run: |
         python3 server.py > log.txt 2>&1 &
+    - name: Tset rule 001
+      run: |
         pytest
