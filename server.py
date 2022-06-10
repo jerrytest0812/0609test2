@@ -14,7 +14,7 @@ def compare():
         else:
             return Response(json.dumps({"status":"a<=b"}), mimetype="application/json")
     except:
-        return Response(json.dumps({"status":"invalid parameter"}), status = 403, mimetype="application/json")
+        return Response(json.dumps({"status":"invalid parameter"}), status = 403,mimetype="application/json")
 
 if __name__ == "__main__":
     app.debug = False
